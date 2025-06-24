@@ -1,5 +1,5 @@
 password = "Python is awesome"
-x = int(input())
+x = input()
 if x == password:
     print('ACCESS GRANTED')
 else:
