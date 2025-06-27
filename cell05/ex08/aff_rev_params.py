@@ -1,11 +1,9 @@
-#!/usr/bin/python3
-import re
 import sys
 
+param = sys.argv[1:]  
 
-n = len(sys.argv)
-if n == 1 or n > 3:
-    print("None")
+if not param:
+    print("none")
 else:
-    result = re.findall(sys.argv[1], sys.argv[2])
-    print(len(result))
+    for arg in reversed(param):
+        print(arg)
