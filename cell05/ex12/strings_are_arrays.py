@@ -1,15 +1,15 @@
-#!/usr/bin/python3
 import sys
 
-n = len(sys.argv)
-if n == 1:
-    print("None")
+args = sys.argv[1:]
+
+if not args:
+    print("none")
 else:
-    i = 1
-    x = 0
-    while i < n:
-        count = sys.argv[i].count('z')
-        print('z' *count)
-        if count == 0:
-            print("none")
-        i +=1     
+    count = 0
+    for arg in args:
+        count += sum(1 for ch in arg if ch == 'z')
+    if count:
+        print("z" * count)
+    else:
+        print("none")
+        
